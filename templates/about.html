@@ -1,15 +1,12 @@
 {% extends 'layout/base.html' %}
 
 {% block headline %}
-
 <h1>Tentang <span>{{TITLE}}</span></h1>
-<!-- <h2>Delivering great work experience for more than your entire life !</h2> -->
-
 {% endblock headline %}
 
+<!-- <h2>Delivering great work experience for more than your entire life !</h2> -->
+
 {% block content %}
-
-
 
 <!-- ======= About Section ======= -->
 <section id="about" class="about">
@@ -80,37 +77,31 @@
       <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-3">
           <ul class="nav nav-tabs flex-column">
+            {% for k in range(client|length)  %}
             <li class="nav-item">
-              <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Modi sit est</a>
+              <a class="nav-link {% if k == 0 %} active show {% else %}  {% endif %} " data-bs-toggle="tab" href="#tab-{{ k+1 }}">{{client[k].name }}</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Unde praesentium sed</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
-            </li>
+            {% endfor %}
           </ul>
         </div>
+        
         <div class="col-lg-9 mt-4 mt-lg-0">
           <div class="tab-content">
-            <div class="tab-pane active show" id="tab-1">
-              <div class="row">
-                <div class="col-lg-8 details order-2 order-lg-1">
-                  <h3>Architecto ut aperiam autem id</h3>
-                  <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                  <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
-                </div>
-                <div class="col-lg-4 text-center order-1 order-lg-2">
-                  <img src="assets/img/specials-1.png" alt="" class="img-fluid">
+            
+            {% for d in range(client|length)  %}
+              <div class="tab-pane {% if d == 0 %} active show{% endif %}" id="tab-{{ d+1 }}">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>{{ client[d].name }}</h3>
+                    <p>{{ client[d].desc }}</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2 ">
+                    <img src="assets/img/clients/{{ client[d].pict }}" alt="" class="img-fluid bg-light bg-opacity-25 p-4" style="border-radius: 35px;">
+                  </div>
                 </div>
               </div>
-            </div>
+            {% endfor %}
+<!--            
             <div class="tab-pane" id="tab-2">
               <div class="row">
                 <div class="col-lg-8 details order-2 order-lg-1">
@@ -123,6 +114,7 @@
                 </div>
               </div>
             </div>
+
             <div class="tab-pane" id="tab-3">
               <div class="row">
                 <div class="col-lg-8 details order-2 order-lg-1">
@@ -158,7 +150,7 @@
                   <img src="assets/img/specials-5.png" alt="" class="img-fluid">
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -167,74 +159,104 @@
   </section><!-- End Specials Section -->
 
 
-  <!-- ======= Team Section ======= -->
-  <section id="team" class="chefs">
+  <!-- ======= team Section ======= -->
+  <section id="team" class="team">
     <div class="container" data-aos="fade-up">
-
       <div class="section-title">
         <h2>Tim</h2>
-        <p>Tim Professional Kami</p>
+        <p>Tim Eksekutif</p>
       </div>
-
-      <div class="row">
-
-        <div class="col-lg-4 col-md-6">
-          <div class="member" data-aos="zoom-in" data-aos-delay="100">
-            <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
-            <div class="member-info">
-              <div class="member-info-content">
-                <h4>Walter White</h4>
-                <span>Master Chef</span>
-              </div>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up">
+                <div class="member-img">
+                    <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <div class="social">
+                        <a href=""><i class="bi bi-twitter"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h4>Dummy 1</h4>
+                    <span>Chief Executive Officer</span>
+                </div>
             </div>
-          </div>
         </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="member" data-aos="zoom-in" data-aos-delay="200">
-            <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
-            <div class="member-info">
-              <div class="member-info-content">
-                <h4>Sarah Jhonson</h4>
-                <span>Patissier</span>
-              </div>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="member" data-aos="zoom-in" data-aos-delay="300">
-            <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
-            <div class="member-info">
-              <div class="member-info-content">
-                <h4>William Anderson</h4>
-                <span>Cook</span>
-              </div>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section><!-- End Chefs Section -->
     
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+                <div class="member-img">
+                    <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                    <div class="social">
+                        <a href=""><i class="bi bi-twitter"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h4>Dummy2</h4>
+                    <span>Product Manager</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+                <div class="member-img">
+                    <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                    <div class="social">
+                        <a href=""><i class="bi bi-twitter"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h4>Dummy 3</h4>
+                    <span>CTO</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+                <div class="member-img">
+                    <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                    <div class="social">
+                        <a href=""><i class="bi bi-twitter"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h4>Dummy 4</h4>
+                    <span>Accountant</span>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    </div>
+  </section><!-- End teams Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Lokasi</h2>
+        <p>Cek Lokasi</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div data-aos="fade-up" id="map-container-google-3" class="col-md-8 z-depth-5-half map-container-3">
+        <iframe style="border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63368.640379076685!2d107.54083914339431!3d-6.945442365351284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e77dd772465b%3A0xb81f604de8896989!2sPT%20SAPTA%20SINERGI%20SOURCINDO!5e0!3m2!1sid!2sid!4v1653620675658!5m2!1sid!2sid" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section><!-- End Contact Section -->
+  
 {% endblock content %}
+

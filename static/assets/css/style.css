@@ -1176,7 +1176,7 @@ section {
 /*--------------------------------------------------------------
 # Chefs
 --------------------------------------------------------------*/
-.chefs .member {
+/* .chefs .member {
   text-align: center;
   margin-bottom: 20px;
   background: #343a40;
@@ -1245,7 +1245,7 @@ section {
 .chefs .member:hover .social {
   bottom: 0;
   transition: bottom ease-in-out 0.4s;
-}
+} */
 
 /*--------------------------------------------------------------
 # Contact
@@ -2204,4 +2204,262 @@ section {
     height: 11px;
     width: 30px;
   }
+}
+
+.whatsapp a{
+  color: #fff;
+}
+.whatsapp a:hover{
+  color: #d9ba85;
+}
+
+
+
+/*** Category ***/
+.cat-item {
+  display: block;
+  box-shadow: 0 0 45px rgba(68, 66, 66, 0.08);
+  border: 1px solid transparent;
+  transition: .5s;
+}
+
+.cat-item:hover {
+  border-color: rgba(68, 66, 66, 0.08);
+  box-shadow: none;
+}
+
+.cat-item h6 {
+  color: #FFFFFF;
+}
+.cat-item p {
+  color: #FFFFFF;
+}
+
+.cat-bg{
+  background-color: #28251f;
+  border-radius: 35px;
+  transition: 0.3s;
+}
+.cat-bg:hover{
+  background-color: #474643;
+}
+
+/*** Job Listing ***/
+.nav-pills .nav-item .active {
+  border-bottom: 2px solid var(--primary);
+}
+.text-grey{
+  color: #7b7b7a;
+}
+
+.job-item {
+  border: 1px solid transparent;
+  background-color: #28251f;
+  border-radius: 10px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+  transition: .5s;
+}
+
+.job-item:hover {
+  border-color: rgba(0, 0, 0, .08);
+  box-shadow: none;
+}
+
+.job-item i{
+  color: #cda45e;
+}
+.job-item .apply{
+  margin: 0 0 0 15px;
+  border: 2px solid #cda45e;
+  background-color: #cda45e;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 25px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+.job-item .apply:hover{
+  background-color: #cda45e;
+  color: black;
+}
+
+.search-category{
+  background: #28251f;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 50px;
+  /* margin-right: 2px; */
+  /* border: 1px solid #454035; */
+}
+
+
+/* map */
+.map-container-3{
+  overflow:hidden;
+  padding-bottom:15%;
+  position:relative;
+  height:0;
+}
+.map-container-3 iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+
+/*--------------------------------------------------------------
+# Our Team
+--------------------------------------------------------------*/
+.team .member {
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.team .member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+.team .member .social {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 40px;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team .member .social a {
+  transition: color 0.3s;
+  color: #2b2320;
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.team .member .social a:hover {
+  color: #f03c02;
+}
+.team .member .social i {
+  font-size: 18px;
+  line-height: 0;
+}
+.team .member .member-info {
+  padding: 25px 15px;
+}
+.team .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #2b2320;
+}
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #b4aca8;
+}
+.team .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #847872;
+}
+.team .member:hover .social {
+  opacity: 1;
+}
+
+/* Facts
+================================================== */
+.facts-wrapper {
+  text-align: center;
+}
+
+.facts-wrapper .ts-facts {
+  color: #fff;
+}
+
+.ts-facts .ts-facts-icon i {
+  font-size: 42px;
+  color: #f03c02;
+}
+
+.ts-facts .ts-facts-content .ts-facts-num {
+  color: #f4f4f4;
+  font-size: 44px;
+  margin: 30px 0 20px;
+}
+
+.ts-facts .ts-facts-content .ts-facts-title {
+  font-size: 16px;
+  color: #f03c02;
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  padding: 50px 20px;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  text-align: center;
+  /* border: 1px solid #ebe6e4; */
+  height: 200px;
+  position: relative;
+  background: #28251f;
+}
+.services .icon {
+  position: absolute;
+  top: -36px;
+  left: calc(50% - 36px);
+  transition: 0.2s;
+  border-radius: 50%;
+  border: 6px solid #28251f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 72px;
+  height: 72px;
+  background: #f03c02;
+}
+.services .icon i {
+  color: #fff;
+  font-size: 24px;
+  line-height: 0;
+}
+.services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.services .title a {
+  color: #343a40;
+}
+.services .icon-box:hover .icon {
+  background: #cda45e;
+  border: 2px solid #f4f4f4;
+}
+.services .icon-box:hover .icon i {
+  color: #f4f4f4;
+}
+.services .icon-box:hover .title a {
+  color: #cda45e;
+}
+.services .description {
+  line-height: 24px;
+  font-size: 14px;
 }

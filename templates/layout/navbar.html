@@ -1,0 +1,44 @@
+
+<!-- ======= Top Bar ======= -->
+<div id="topbar" class="d-flex align-items-center fixed-top">
+  <div class="container d-flex justify-content-center justify-content-md-between">
+
+    <div class="contact-info d-flex align-items-center">
+      <i class="bi bi-phone d-flex align-items-center"><span>(022) 421-0343</span></i>
+      <i class="bi bi-whatsapp d-flex align-items-center ms-4 whatsapp"><span><a href="https://api.whatsapp.com/send/?phone=6282116837950&text&app_absent=0">082116837950</a></span></i>
+    </div>
+
+    <div class="languages d-none d-md-flex align-items-center">
+      <ul>
+        <li>INA</li>
+        <li><a href="#">ENG</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-cente">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+    <h1 class="logo me-auto me-lg-0"><a href="{{ url_for('index') }}">{{TITLE}}</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+          {% for item in range(menu|length)  %}
+          
+          <li><a class="nav-link scrollto {% if page == menu[item]  %} active {% else %}  {% endif %}" href="{{ url_for(func[item]) }}">{{ menu[item] }}</a></li>
+              
+          {% endfor %}
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+    <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Melamar</a>
+
+  </div>
+</header><!-- End Header -->
+
+
+  
