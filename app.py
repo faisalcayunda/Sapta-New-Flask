@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__, static_url_path="")
 # app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql+pymysql://root:root@localhost/sapta_devel'
-app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://pxnwxfoknkjyhr:7d8cda305c7dc49cf9f57307c62616f98a2a02e86f3fcb9b2e77ac106b202a7c@ec2-44-194-92-192.compute-1.amazonaws.com:5432/db2fjls8sqtuqv'
+app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql://pxnwxfoknkjyhr:7d8cda305c7dc49cf9f57307c62616f98a2a02e86f3fcb9b2e77ac106b202a7c@ec2-44-194-92-192.compute-1.amazonaws.com:5432/db2fjls8sqtuqv'
 app.config['SECRET_KEY'] = "random string"
 db = SQLAlchemy(app)
 
