@@ -54,4 +54,4 @@ def news(page="Berita"):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=False)
